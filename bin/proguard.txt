@@ -1,0 +1,6 @@
+# view AndroidManifest.xml #generated:37
+-keep class com.easyway.barcode.PhonegapBarcodeActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:45
+-keep class com.phonegap.DroidGap { <init>(...); }
+
