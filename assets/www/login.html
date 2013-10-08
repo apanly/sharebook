@@ -1,32 +1,35 @@
-<!DOCTYPE HTML>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
+    <title></title>
     <meta http-equiv="Content-type" content="text/html; charset=utf-8">
-    <title>ShareBook二维码扫描</title>
     <!--自适应界面,如果出现,在某些设备出现界面偏小的话,检查一下有没有加入这句 -->
     <meta http-equiv="Content-type" name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width">
     <!-- 加载phonegap -->
     <script type="text/javascript" charset="utf-8" src="static/js/phonegap-1.4.1.js"></script>
     <link href="jquery.mobile/jquery.mobile-1.0.1.min.css" rel="stylesheet">
-    <link href="static/css/common.css" rel="stylesheet">
     <!-- 加载jquery -->
     <script type="text/javascript" charset="utf-8" src="jquery.mobile/jquery-1.6.4.min"></script>
     <!-- 加载jquerymobile -->
     <script type="text/javascript" charset="utf-8" src="jquery.mobile/jquery.mobile-1.0.1.js"></script>
-    <!-- 加载自定义插件 -->
-    <script type="text/javascript" charset="utf-8" src="static/js/barcodescanner.js"></script>
+    <link href="static/css/login.css" rel="stylesheet">
     <script type="text/javascript" charset="utf-8" src="static/js/common.js"></script>
-    <script type="text/javascript" charset="utf-8" src="static/js/index.js"></script>
+    <script type="text/javascript" charset="utf-8" src="static/js/login.js"></script>
 </head>
 <body>
 <!-- begin first page -->
 <section id="page1" data-role="page">
-    <header data-role="header"  data-theme="b" id="userinfo" data-position="fixed">
-        <h3>开始ShareBook之旅</h3>
-        <a href="javascript:void(0);" data-role="button" data-icon="gear" data-transition="slide" id="logout">退出</a>
-    </header>
+    <header data-role="header"  data-theme="b" ><h3>开始ShareBook之旅</h3></header>
     <div data-role="content" class="content">
-        <p style="backg"><font color="#2EB1E8" >ShareBook二维码扫描</font></p>
+        <p style="backg"><font color="#2EB1E8" >登录ShareBook</font></p>
+        <form method="post" id="loginform">
+            <input type="text" name="username" id="username" value="请填写邮箱或者手机"/><br>
+            <input type="password" name="password" id="password"/>
+            <!--<fieldset data-role="controlgroup" >
+                <input type="checkbox" name="checkbox-1" id="checkbox-1" class="custom" />
+                <label for="checkbox-1">保持登录状态</label>
+            </fieldset>-->
             <fieldset data-role="controlgroup">
                 <select id="mode">
                     <option value="1">家庭笔记本</option>
@@ -34,14 +37,9 @@
                     <option value="3">个人网站</option>
                 </select>
             </fieldset>
-            <a data-role="button" id="btnbarcode" data-theme="b">扫描</a>
-            <fieldset data-role="controlgroup" >
-                <label id="barcodediv">二维码信息:</label>
-            </fieldset>
-            <fieldset data-role="controlgroup" >
-                <label id="info">结果:</label>
-            </fieldset>
-            <button id="forcebutton">强制提交</button>
+            <a rel="external" href="register.html" data-role="button" id="toregist" data-theme="e">注册</a>
+            <a data-role="button" id="submit" data-theme="b">登录</a>
+        </form>
     </div>
     <footer data-role="footer" data-position="fixed"><h1>©2013 ShareBook(echocool.net/library)</h1></footer>
 </section>

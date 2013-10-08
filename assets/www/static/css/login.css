@@ -1,0 +1,11 @@
+p {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin: 15px 0;
+}
+#submit{
+    float:right; margin:10px;
+}
+#toregist{
+    float:left; margin:10px;
+}
